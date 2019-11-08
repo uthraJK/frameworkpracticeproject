@@ -24,8 +24,9 @@ public class BasePage {
 				driver=new ChromeDriver();
 			}
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			
+			driver.get("http://automationpractice.com/index.php ");
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		}
 		}
 		public boolean elementFound(WebElement element) 

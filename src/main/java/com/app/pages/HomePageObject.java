@@ -3,7 +3,7 @@ package com.app.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePageObject  {
+public class HomePageObject extends BasePage {
 	
 	@FindBy(xpath = "//ul/li/a[@title='Women']")
 	private WebElement women;

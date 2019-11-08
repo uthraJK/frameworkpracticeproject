@@ -1,28 +1,41 @@
 package com.app.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.app.pages.BasePage;
 import com.app.pages.HomePageObject;
 
-public class HomePageTest extends BasePage {
+public class HomePageTest {
 	HomePageObject ho;
-	BasePage bp;
-	HomePageTest ht;
 	
+	HomePageTest ht;
+
 	public HomePageTest()
 	{
 		ho = new HomePageObject();
-		bp = new BasePage();
+		
 	}
 	
-	
+@Test	
 	public void verifyTags()
 	{
-		Assert.assertEquals(arg0, arg1);
+	
+	System.out.println("start   1");
+	Assert.assertTrue(ho.elementFound(ho.getWomenPath()));
+	//Assert.assertTrue(ho.elementFound(ho.getDressesPath()));
+	//Assert.assertTrue(ho.elementFound(ho.getTshirtPath()));	
+	
 	}
+	public void verifyNavigation()
+	{
+		ho.navigateWomen();
+		Assert.assertTrue(ho.getTitle().contains("women"));
+		//ho.navigateDresses();
+		//Assert.assertTrue(ho.getTitle().contains("dresses"));
+		//ho.navigateTshirt();
+		//Assert.assertTrue(ho.getTitle().contains("Tshirt"));
+	}}
+
 	
 	
-	
-}
- 
